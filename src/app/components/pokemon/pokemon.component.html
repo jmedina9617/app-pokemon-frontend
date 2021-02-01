@@ -1,0 +1,59 @@
+<div class="container">
+
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <img src="https://app-pokemon-jhorvy.herokuapp.com/imagen/{{pokemon['img']}}.png"
+                 class="img-thumbnail">
+        </div>
+    
+        <div class="col-md-6">
+    
+            <h3>{{pokemon.name['english']}}</h3>
+
+            <div class="mt-2">
+
+                <label for="">Attack</label>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" [style.width]="pokemon.base['Attack'] + '%' " aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                
+                <label for="">Defense</label>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" [style.width]="pokemon.base['Defense'] + '%' " aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+    
+                <label for="">HP</label>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" [style.width]="pokemon.base['HP'] + '%' " aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+    
+                <label for="">Sp. Attack</label>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" [style.width]="pokemon.base['Sp. Attack'] + '%' " aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+    
+                <label for="">Sp. Defense</label>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" [style.width]="pokemon.base['Sp. Defense'] + '%' " aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+    
+                <label for="">Speed</label>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" [style.width]="pokemon.base['Speed'] + '%' " aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+            </div>
+            
+    
+            <div class="row mt-4">
+                <div class="col">
+                    <button class="btn btn-outline-info"
+                            (click)="onRegresar()">Regresar</button>
+                </div>
+            </div>
+    
+        </div>
+    
+    </div>
+
+</div>

@@ -1,0 +1,23 @@
+
+<div class="container mt-2">
+
+  <div class="col">
+
+    <div class="card m-3" style="width: 18rem; float: left;" *ngFor="let pokemon of pokemons">
+      <img src="https://app-pokemon-jhorvy.herokuapp.com/imagen/{{pokemon['img']}}.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{pokemon.name.english}}</h5>
+        <!-- <input type="text" [value]="name.english"> -->
+        <span class="badge bg-danger m-1" 
+              style="color: white;" 
+              *ngFor="let type of pokemon.type">{{type}}</span>
+        <div class="text-center">
+          <button type="button" (click)="verPokemon(pokemon._id)" class="btn btn-primary">Ver más...</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</div>
